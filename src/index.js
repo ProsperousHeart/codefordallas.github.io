@@ -1,19 +1,17 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-import Header from "./components/Header";
-import Mission from "./components/Mission";
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Mission />
-      </div>
-    );
-  }
-};
-
-const HTMLRoot = document.getElementById("root");
-HTMLRoot ? ReactDOM.render(<App />, HTMLRoot) : false;
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
